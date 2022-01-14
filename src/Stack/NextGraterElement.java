@@ -16,7 +16,7 @@ public class NextGraterElement {
           st.push(arr[arr.length-1]);
            ans[ans.length-1]=-1;
           for (int i = arr.length-2; i >=0 ; i--) {
-              while (st.size()>0 && st.peek()<=arr[i]){
+              while (st.size()>0 && st.peek()<=arr[i]){      // tab tk khud peek se bada h aur stack khali na ho jae
                   st.pop();
               }
               if (st.size()==0){
@@ -24,7 +24,7 @@ public class NextGraterElement {
               }else {
                   ans[i]=st.peek();
               }
-              st.push(arr[i]);
+              st.push(arr[i]);      // jate jate push kr dega khud ko
           }
          return ans;
     }
